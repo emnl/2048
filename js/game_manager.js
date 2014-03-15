@@ -155,6 +155,10 @@ GameManager.prototype.move = function (direction) {
   if (moved) {
     this.addRandomTile();
 
+    if (Math.random() > 0.9000) {
+      this.addRandomTile(); // IT'S OVER 9000!!
+    }
+
     if (!this.movesAvailable()) {
       this.over = true; // Game over!
     }
